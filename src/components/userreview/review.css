@@ -1,0 +1,64 @@
+.reviews-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .reviews-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .review-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    flex: 1;
+  }
+  
+  .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .stars {
+    color: gold;
+  }
+  
+  .review-date, .review-location {
+    font-size: 0.9em;
+    color: gray;
+  }
+  
+  .review-content {
+    margin: 10px 0;
+    font-size: 1em;
+  }
+  
+  .review-author {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+  
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .reviews-container {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      gap: 10px;
+    }
+  
+    .review-card {
+      min-width: 250px; /* Adjust the width as needed */
+      max-width: 250px; /* Ensure all cards are the same width */
+    }
+  }
+  
+  .error-message {
+    color: red;
+    font-weight: bold;
+  }
+  

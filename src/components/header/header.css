@@ -1,0 +1,128 @@
+/* Header container */
+.header {
+    display: flex;
+    justify-content: space-between; /* Space between logo and icons */
+    align-items: center; /* Align vertically */
+    padding: 15px 30px; /* Add padding around the header */
+    background-color: #f8f9fa; /* Optional: Background color */
+    height: 100px; /* Adjust header height */
+  }
+  
+  /* Logo container and styling */
+  .logo-container {
+    flex: 1; /* Allow the logo to take space on the left */
+  }
+  
+  .logo {
+    height: 80px; /* Increased logo size */
+    width: auto; /* Maintain aspect ratio */
+    margin-left: 10px; /* Add margin to the left of the logo */
+  }
+  
+  /* Icons container and styling */
+  .icons-container {
+    display: flex;
+    gap: 25px; /* Add space between icons */
+    margin-right: 10px; /* Add margin to the right of the icons */
+  }
+  
+  .icon {
+    font-size: 2.5rem; /* Increased size of the icons */
+    color: #333; /* Icon color */
+    cursor: pointer;
+    margin: 5px; /* Add a slight margin around each icon */
+  }
+  
+  /* Search bar container */
+  .search-container {
+    display: flex;
+    justify-content: center; /* Center the search bar */
+    margin: 20px auto; /* Add space around the search bar */
+    width: 100%;
+    max-width: 800px; /* Increased maximum width for larger screens */
+  }
+  
+  /* Search bar wrapper */
+  .search-wrapper {
+    position: relative;
+    width: 100%;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1.8rem;
+    color: #666;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 15px 20px 15px 60px; /* Add padding to align with the larger icon */
+    font-size: 1.2rem; /* Increased font size */
+    border: 1px solid #ccc;
+    border-radius: 40px; /* Larger rounded border */
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border 0.3s ease;
+  }
+  
+  .search-input:focus {
+    border: 1px solid #007bff; /* Highlighted border color */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .header {
+      padding: 10px 20px;
+      height: 80px;
+    }
+  
+    .logo {
+      height: 60px; /* Adjust logo size for smaller screens */
+    }
+  
+    .icon {
+      font-size: 2rem; /* Reduce icon size for smaller screens */
+    }
+  
+    .icons-container {
+      gap: 15px; /* Reduce space between icons */
+    }
+  
+    .search-container {
+      width: 90%; /* Adjust search bar width for smaller screens */
+      max-width: 100%; /* Ensure full width */
+    }
+  
+    .search-input {
+      font-size: 1rem; /* Adjust font size */
+      padding: 12px 15px 12px 50px; /* Adjust padding for smaller screens */
+      border-radius: 30px; /* Slightly smaller rounded corners */
+    }
+  
+    .search-icon {
+      font-size: 1.5rem; /* Adjust icon size */
+      left: 15px; /* Reduce left margin */
+    }
+  }
+  
+  /* Large screens */
+  @media (min-width: 1200px) {
+    .search-container {
+      max-width: 1000px; /* Further increase width on large screens */
+    }
+  
+    .search-input {
+      font-size: 1.5rem; /* Larger font for better visibility */
+      padding: 18px 25px 18px 70px; /* Adjust padding for larger inputs */
+      border-radius: 50px; /* More rounded edges */
+    }
+  
+    .search-icon {
+      font-size: 2rem; /* Larger icon size */
+      left: 25px; /* Adjust position for large screens */
+    }
+  }
+  
