@@ -3,19 +3,11 @@ import ReactDOM from 'react-dom/client';
 
 
 import reportWebVitals from './reportWebVitals';
-import Header from './components/header/header'
-import BannerCarousel from './components/banner/banner';
-import FAQ from './components/faq/faq';
-import LifeStyle from './components/lifestyle/lifestyle';
-import Reviews from './components/userreview/review';
+import App from './App';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Header/>
-    <BannerCarousel/>
-    <Reviews/>
-    <LifeStyle/>
-    <FAQ/>
+    <App/>
     
   </React.StrictMode>
 );

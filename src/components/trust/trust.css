@@ -1,0 +1,130 @@
+/* Trust Component Styles */
+.trust-container {
+  text-align: center;
+  padding: 50px;
+  max-width: 1400px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.trust-container h1 {
+  font-size: 3em;
+  margin: 30px auto;
+  color: #333;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.trust-container .highlight {
+  color: #007bff;
+  font-weight: bold;
+}
+
+.trust-container .info {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+  gap: 30px;
+}
+
+.trust-container .info-item {
+  text-align: center;
+  flex-basis: 30%;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trust-container .info-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.trust-container .info-item img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.trust-container .info-item p {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.trust-container .additional-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.trust-container .additional-info-item {
+  width: 250px;
+  margin: 20px;
+  text-align: center;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trust-container .additional-info-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.trust-container .additional-info-item img {
+  width: 90px;
+  height: 90px;
+  margin-bottom: 20px;
+}
+
+.trust-container .additional-info-item h2 {
+  font-size: 1.4em;
+  color: #333;
+}
+
+.trust-container .additional-info-item h3 {
+  font-size: 1.2em;
+  color: #666;
+}
+
+.trust-container .additional-info-item p {
+  margin-top: 15px;
+  font-size: 1em;
+  color: #777;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .trust-container .info,
+  .trust-container .additional-info {
+    flex-direction: column;
+  }
+
+  .trust-container .info-item,
+  .trust-container .additional-info-item {
+    margin-bottom: 20px;
+    width: 90%;
+  }
+
+  .trust-container h1 {
+    font-size: 2.5em;
+  }
+
+  .trust-container .info-item img,
+  .trust-container .additional-info-item img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .trust-container .additional-info-item {
+    padding: 20px;
+  }
+}

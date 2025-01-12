@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './banner.css'; // Import custom CSS for carousel
+import './banner.css'; 
 
 const BannerCarousel = () => {
   const [banners, setBanners] = useState([]);
-  const [currentIndex, setCurrentIndex] = useState(0); // To track the active slide
+  const [currentIndex, setCurrentIndex] = useState(0); 
 
   useEffect(() => {
     // Fetching the page config data from the API
@@ -24,13 +24,13 @@ const BannerCarousel = () => {
       });
   }, []);
 
-  // Auto-slide every 3 seconds
+  
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length); // Loop back to the first image
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length); 
     }, 3000);
 
-    return () => clearInterval(interval); // Cleanup the interval on component unmount
+    return () => clearInterval(interval); 
   }, [banners.length]);
 
   return (

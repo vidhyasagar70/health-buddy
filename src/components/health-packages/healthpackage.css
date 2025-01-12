@@ -1,0 +1,132 @@
+.health-checkup {
+  font-family: 'Roboto', sans-serif;
+  padding: 20px;
+  background-color: #f7f7f7;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #003366;
+  font-size: 2em;
+}
+
+.categories {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: auto;
+  margin-bottom: 20px;
+  padding: 10px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #007bff #f7f7f7;
+}
+
+.categories::-webkit-scrollbar {
+  height: 8px;
+}
+
+.categories::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 10px;
+}
+
+.categories::-webkit-scrollbar-track {
+  background-color: #f7f7f7;
+}
+
+.categories-container {
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.categories button {
+  padding: 10px 20px;
+  border: 1px solid #007bff;
+  background-color: white;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 1em;
+}
+
+.categories button.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.packages-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 10px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #007bff #f7f7f7;
+}
+
+.packages::-webkit-scrollbar {
+  height: 8px;
+}
+
+.packages::-webkit-scrollbar-thumb {
+  background-color: #007bff;
+  border-radius: 10px;
+}
+
+.packages::-webkit-scrollbar-track {
+  background-color: #f7f7f7;
+}
+
+.package {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex: 0 0 300px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.package:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.package h2 {
+  font-size: 1.5em;
+  color: #003366;
+}
+
+.add-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .categories-container {
+    flex-wrap: nowrap;
+  }
+
+  .packages-container {
+    flex-wrap: nowrap;
+  }
+
+  .package {
+    flex: 0 0 100%;
+  }
+}

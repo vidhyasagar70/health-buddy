@@ -28,7 +28,7 @@ function Header() {
           />
         </div>
       </div>
-      <Headericon/>
+      
     </div>
   );
 }

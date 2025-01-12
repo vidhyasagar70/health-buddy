@@ -1,50 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import './lifestyle.css';
+import React from "react";
+import "./lifestyle.css";
 
-const LifeStyle = () => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+const packages = [
+  { title: "Hyper-Tension", icon: "hyper-tension-icon" },
+  { title: "Obesity", icon: "obesity-icon" },
+  { title: "Smoking", icon: "smoking-icon" },
+  { title: "Diabetic", icon: "diabetic-icon" },
+  { title: "Obesity", icon: "obesity-icon" },
+  { title: "Hyper-Tension", icon: "hyper-tension-icon" },
+];
 
-  useEffect(() => {
-    console.log("Fetching data from API...");
-    fetch('https://677f757b0476123f76a68a42.mockapi.io/api/labs/v1/page_config')
-      .then(response => response.json())
-      .then(apiData => {
-        console.log("Data fetched:", apiData);
-        const requiredData = apiData[0].page_config.find(item => item.id === "4" && item.title === "LifeStyle Health Check Packages");
-        console.log("Required data:", requiredData);
-        setData(requiredData);
-        setLoading(false);
-      })
-      .catch(error => {
-        console.error("Error fetching data:", error);
-        setLoading(false);
-      });
-  }, []);
-
-  console.log("Component re-rendered");
-
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (!data) {
-    return <div>No data available</div>;
-  }
-
+function Lifestyle() {
   return (
-    <div className="container">
-      <h1>{data.title}</h1>
+    <div className="App">
+      <h1 className="title">Lifestyle Health Check-up Packages</h1>
       <div className="packages">
-        {data.props.map((pkg, index) => (
+        {packages.map((pkg, index) => (
           <div key={index} className="package">
-            <img src={pkg.imgSrc} alt={pkg.title} onError={(e) => { e.target.onerror = null; e.target.src="fallback-image-url"; }} />
+            <div className={pkg.icon}></div>
             <p>{pkg.title}</p>
           </div>
         ))}
       </div>
     </div>
   );
-};
+}
 
-export default LifeStyle;
+export default Lifestyle;

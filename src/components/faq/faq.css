@@ -18,7 +18,7 @@
   .faq-title {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 2rem; /* Increased font size */
+    font-size: 2rem; 
   }
   
   .faq-item {
@@ -34,11 +34,11 @@
   }
   
   .faq-question h2 {
-    font-size: 1.25rem; /* Increased font size */
+    font-size: 1.25rem; 
   }
   
   .faq-question span {
-    font-size: 2rem; /* Increased font size */
+    font-size: 2rem; 
   }
   
   .faq-answer {
@@ -57,11 +57,11 @@
     }
   
     .faq-question h2 {
-      font-size: 1rem; /* Slightly decreased for smaller screens */
+      font-size: 1rem; 
     }
   
     .faq-question span {
-      font-size: 1.5rem; /* Slightly decreased for smaller screens */
+      font-size: 1.5rem; 
     }
   
     .faq-answer {

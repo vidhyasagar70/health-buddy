@@ -1,42 +1,42 @@
-/* Ensure the image fits the carousel container while maintaining aspect ratio */
+
 .carousel-item img {
-  object-fit: contain; /* Ensure the image is fully visible within the container */
-  width: 100%; /* Ensure the image spans the full width */
-  height: 100%; /* Make the image take full height without cropping */
-  border-radius: 15px; /* Rounded corners */
-  transition: all 0.3s ease; /* Smooth transition for resizing */
+  object-fit: contain; 
+  width: 100%; 
+  height: 100%; 
+  border-radius: 15px; 
+  transition: all 0.3s ease; 
 }
 
-/* Reduce carousel size on smaller screens */
+
 @media (max-width: 768px) {
-  /* Smaller height for mobile view */
+
   #bannerCarousel {
-    height: 200px; /* Adjust height for mobile view */
-    margin: 20px; /* Add margin on all sides */
+    height: 200px; 
+    margin: 20px; 
   }
 
   .carousel-item img {
-    height: 100%; /* Ensure image fits within mobile container */
-    border-radius: 10px; /* Slightly smaller rounded corners for mobile */
+    height: 100%; 
+    border-radius: 10px; 
   }
 }
 
-/* Styling for the carousel container */
+
 #bannerCarousel {
-  max-width: 80%; /* Set carousel container to 80% of the screen width */
-  margin: 20px auto; /* Add margin around the carousel */
-  border-radius: 20px; /* Rounded corners for carousel */
-  overflow: hidden; /* Hide anything overflowing from rounded corners */
-  height: 300px; /* Set height for desktop */
+  max-width: 80%; 
+  margin: 20px auto; 
+  border-radius: 20px; 
+  overflow: hidden; 
+  height: 300px; 
 }
 
-/* Optional: Make the carousel container more compact and add padding */
+
 .carousel-inner {
-  padding: 0 10px; /* Add padding for spacing */
+  padding: 0 10px; 
 }
 
-/* Adjust carousel control button positioning */
+
 .carousel-control-prev, 
 .carousel-control-next {
-  z-index: 10; /* Make sure the navigation buttons are on top */
+  z-index: 10; 
 }

@@ -14,11 +14,11 @@ const Reviews = () => {
         return response.json();
       })
       .then(data => {
-        console.log('API Data:', data); // Log the entire data received from the API
+        console.log('API Data:', data); 
         if (data.length > 0 && data[0].page_config) {
           const userReviews = data[0].page_config.find(item => item.id === "6");
           if (userReviews && userReviews.props) {
-            console.log('User Reviews:', userReviews.props); // Log the user reviews
+            console.log('User Reviews:', userReviews.props); 
             setReviews(userReviews.props);
           } else {
             setError('No reviews found');

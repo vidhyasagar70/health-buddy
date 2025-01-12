@@ -15,20 +15,20 @@ const Headericon = () => {
         // Log the fetched data to check the structure
         console.log("Fetched data:", data);
 
-        // Access the page_config array from the fetched data
+    
         const pageConfig = data[0]?.page_config || [];
 
-        // Log the page_config to inspect the structure
+   
         console.log("Page Config:", pageConfig);
 
-        // Find the item with id "1" in the page_config array
+      
         const item = pageConfig.find((item) => item.id === "1");
 
-        // Log the item to ensure you're finding the correct object
+     
         console.log("Item with id 1:", item);
 
         if (item && item.props) {
-          setIcons(item.props); // Set the props array as icons
+          setIcons(item.props); 
         }
       } catch (error) {
         console.error("Error fetching data:", error);
